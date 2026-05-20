@@ -3,8 +3,7 @@
 ## Biodata Mahasiswa
 - **Nama** : I Komang Arya Yoga Pramana  
 - **NIM** : 2415354005  
-- **Kelas** : 4A TRPL  
-- **Mata Kuliah** : Praktikum Arsitektur dan Pengolahan Jaringan Kontainer  
+- **Kelas** : 4A TRPL   
 
 ---
 
