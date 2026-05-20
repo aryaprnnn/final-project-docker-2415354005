@@ -1,6 +1,6 @@
 # Laporan Final Project - Kontainerisasi Aplikasi Backend dan Database dengan Docker
 
-## 👤 Biodata Mahasiswa
+## Biodata Mahasiswa
 - **Nama** : I Komang Arya Yoga Pramana  
 - **NIM** : 2415354005  
 - **Kelas** : 4A TRPL  
@@ -8,7 +8,7 @@
 
 ---
 
-# 🛠️ 1. Arsitektur Sistem & Multi-Container
+# 1. Arsitektur Sistem & Multi-Container
 
 Project ini mengimplementasikan arsitektur **multi-container** yang memisahkan antara:
 - **Backend Application** menggunakan Express.js (Node.js)
@@ -25,7 +25,7 @@ Dengan mekanisme tersebut, backend tidak akan crash saat proses startup Docker C
 
 ---
 
-# 🚀 2. Pengujian Docker Compose, Volume, dan Network
+# 2. Pengujian Docker Compose, Volume, dan Network
 
 ## Menjalankan Docker Compose
 Project dijalankan menggunakan perintah berikut secara background:
@@ -47,11 +47,11 @@ Untuk memastikan seluruh container berjalan dan backend berhasil terkoneksi ke M
 
 ### Bukti Log Jalannya Container dan Validasi Koneksi Berhasil
 
-![Docker Container dan Log Koneksi Sukses](Screenshot 2026-05-20 150309.png)
+![Docker Container dan Log Koneksi Sukses](ss-container-dan-post.png)
 
 ---
 
-# ⚡ 3. Pengujian Endpoint CRUD API (Thunder Client)
+# 3. Pengujian Endpoint CRUD API (Thunder Client)
 
 Pengujian endpoint dilakukan menggunakan Thunder Client pada Visual Studio Code untuk memastikan seluruh operasi CRUD berjalan dengan baik.
 
@@ -92,7 +92,7 @@ Content-Type: application/json
 
 ### Bukti Pengujian
 
-![POST Endpoint](Screenshot 2026-05-20 150309.png)
+![POST Endpoint](ss-get-users.png)
 
 ---
 
@@ -124,7 +124,7 @@ GET http://localhost:3000/users
 
 ### Bukti Pengujian
 
-![GET Endpoint](Screenshot 2026-05-20 150342.png)
+![GET Endpoint](ss-get-users.png)
 
 ---
 
@@ -162,7 +162,7 @@ Content-Type: application/json
 
 ### Bukti Pengujian
 
-![PUT Endpoint](Screenshot 2026-05-20 150446.png)
+![PUT Endpoint](ss-put-user.png)
 
 ---
 
@@ -190,11 +190,11 @@ DELETE http://localhost:3000/users/1
 
 ### Bukti Pengujian
 
-![DELETE Endpoint](Screenshot 2026-05-20 150523.png)
+![DELETE Endpoint](ss-delete-user.png)
 
 ---
 
-# ☁️ 4. Publikasi Image ke Docker Hub
+# 4. Publikasi Image ke Docker Hub
 
 Sebagai tahap akhir deployment container, image backend berhasil dipublikasikan ke Docker Hub agar dapat digunakan kembali secara global.
 
@@ -243,7 +243,7 @@ docker push aryaprnnn/backend-app-final:latest
 
 Berikut adalah bukti log terminal ketika seluruh layer berhasil terunggah ke registry Docker Hub:
 
-![Docker Hub Push Terminal](Screenshot 2026-05-20 150831.png)
+![Docker Hub Push Terminal](ss-docker-hub-push.png)
 
 ---
 
@@ -251,11 +251,11 @@ Berikut adalah bukti log terminal ketika seluruh layer berhasil terunggah ke reg
 
 Menampilkan dashboard akun Docker Hub yang memvalidasi bahwa repository `backend-app-final` telah aktif dan menerima push terbaru:
 
-![Docker Hub Dashboard](Screenshot 2026-05-20 150916.png)
+![Docker Hub Dashboard](ss-docker-hub-dashboard.png)
 
 ---
 
-# 📦 5. Struktur Project
+# 5. Struktur Project
 
 ```bash
 final-project-docker-2415354005/
@@ -274,7 +274,7 @@ final-project-docker-2415354005/
 
 ---
 
-# 🔧 6. Teknologi yang Digunakan
+# 6. Teknologi yang Digunakan
 
 * Node.js
 * Express.js
@@ -286,7 +286,7 @@ final-project-docker-2415354005/
 
 ---
 
-# ✅ 7. Kesimpulan
+# 7. Kesimpulan
 
 Berdasarkan hasil implementasi dan pengujian yang telah dilakukan, dapat disimpulkan bahwa:
 
