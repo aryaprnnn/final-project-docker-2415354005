@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./app
+    container_name: backend-app-final
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PORT=${PORT}
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_PORT=${DB_PORT}
+    depends_on:
+      - mysql
+    networks:
+      - final-network
+
+  mysql:
+    image: mysql:8
+    container_name: ${DB_HOST}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - final-db-data:/var/lib/mysql 
+    networks:
+      - final-network
+
+networks:
+  final-network:
+    driver: bridge
+
+volumes:
+  final-db-data:
